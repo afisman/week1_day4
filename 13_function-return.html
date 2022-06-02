@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+
+        // Example 3: return
+        function getBookingDetails(customer, date, price, category = 'ESTÁNDAR') {
+            const details = `Estimado/a ${customer.name} ${customer.lastName}, su reserva para el día ${date} está confirmada, para una habitación ${category} (${price}€)`
+            return details
+        }
+
+        const booking1 = getBookingDetails({ name: 'German', lastName: ' Álvarez' }, '12/12/2023', 647, 'VISTA MAR')
+        const booking2 = getBookingDetails({ name: 'Mónica', lastName: ' Sánchez' }, '13/12/2023', 657)
+
+        document.write(booking1)
+        console.warn(booking2)
+
+
+
+
+        console.log('------')
+
+
+
+
+
+        // Example 4: return
+        function isMultiple(val1, val2) {
+            const rest = val1 % val2
+            const result = (rest === 0)
+            return result
+        }
+
+        const returnedResult = isMultiple(4, 2)
+        const text = `¿Son 4 y 2 múltiplos? ${returnedResult}`
+        console.log(text)
+
+
+
+
+
+        console.log('------')
+
+
+
+
+        // Example 5: return
+        function calculateTotalPrice(subtotal, taxPercent) {
+
+            if (typeof subtotal != 'number' || typeof taxPercent != 'number') {
+                return 'VALORES NO VÁLIDOS'
+            }
+
+            const theTaxPart = subtotal * taxPercent / 100
+            const finalResut = subtotal + theTaxPart
+            return finalResut
+
+            console.log('Estoy debajo del return y no llegaré a mostrarme nunca')
+        }
+
+        const price = calculateTotalPrice(50, 7)
+        console.log(`El resultado que será enviado a la BBDD es ${price}€`)
+
+
+
+    </script>
+</body>
+
+</html>

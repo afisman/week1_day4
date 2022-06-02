@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+
+        // Declaration
+        const drinks = ['Agua', 'Kas', 'Coca-cola', 'Monster', 'Fanta', 'Aquarius', 'Jagger', 'Cervemocho']
+        console.log('Array inicial', drinks)
+
+
+        // Data type
+        console.log('El tipo de dato de un array es', typeof drinks)
+
+
+        // Access (getter)
+        console.log('Acceso:', drinks[0])
+        console.log('Acceso:', drinks[1])
+
+
+        // Access (setter)
+        drinks[3] = 'Red Bull'
+        console.log('Array manipulado', drinks)
+
+
+        // Length property
+        console.log('El array tiene un total de', drinks.length, 'elementos')
+
+
+        // Adding values (last) ---- imperative
+        drinks[drinks.length] = 'Café'
+        console.log('Array manipulado', drinks)
+
+
+        // Adding values (last) ---- declarative
+        drinks.push('Chocobaylies', 'Nestea')
+        console.log('Array manipulado', drinks)
+
+
+        // Adding values (first)
+        drinks.unshift('Pepsi')
+        console.log('Array manipulado', drinks)
+
+
+        // Removing values (last)
+        drinks.pop()
+        console.log('Array manipulado', drinks)
+
+
+        // Removing values (several)
+        drinks.splice(1, 4)             // Elimina los elementos desde el índice 1 hasta el 4
+        console.log('Array manipulado', drinks)
+
+
+
+
+
+        // Split text into array
+        const string = 'Lorem ipsum dolor sit amet'
+        const words = string.split(' ')
+        console.log('Cada una de las palabras son:', words)
+
+    </script>
+</body>
+
+</html>

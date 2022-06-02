@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const drinks = [
+            {
+                name: 'Fanta',
+                sugar: true,
+                price: 1,
+                weight: .56,
+                ingredients: ['water', 'sugar', 'sweetener']
+            },
+            {
+                name: 'Jagger',
+                sugar: true,
+                price: 3,
+                weight: .96,
+                ingredients: ['fantasía', 'alcohol', 'malas decisiones']
+            }
+        ]
+
+
+
+        // Array of objects iteration
+        for (let i = 0; i < drinks.length; i++) {
+            console.log(`La bebida ${drinks[i].name} pesa ${drinks[i].weight}. Ingredientes:`)
+
+            for (let j = 0; j < drinks[i].ingredients.length; j++) {
+                console.log('->', drinks[i].ingredients[j])
+            }
+        }
+
+
+
+        drinks.forEach(drink => {
+            console.log(`La bebida ${drink.name} pesa ${drink.weight}. Ingredientes:`)
+            drink.ingredients.forEach(ing => console.log('- ', ing))
+        })
+
+    </script>
+</body>
+
+</html>

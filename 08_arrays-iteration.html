@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        const drinks = ['Agua', 'Kas', 'Coca-cola', 'Monster', 'Fanta', 'Aquarius', 'Jagger', 'Cervemocho']
+
+
+
+        // for iteration (imperative)
+        for (let i = 0; i < drinks.length; i++) {
+            console.log('Una bebida es', drinks[i])
+        }
+
+
+        console.log('------')
+
+
+
+        // STEP 1 -> forEach iteration (declarative, nominal function)
+        drinks.forEach(showEachDrink)
+
+        function showEachDrink(eachDrink) {
+            console.log('Una bebida es', eachDrink)
+        }
+
+
+
+        console.log('------')
+
+
+
+        // STEP 2 -> forEach iteration (declarative, anonymous function)
+        drinks.forEach(function (eachDrink) {
+            console.log('Una bebida es', eachDrink)
+        })
+
+
+
+        console.log('------')
+
+
+
+        // STEP 3 -> forEach iteration (declarative, arrow function)
+        drinks.forEach(eachDrink => console.log('Una bebida es', eachDrink))
+
+
+
+    </script>
+</body>
+
+</html>

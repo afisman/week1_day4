@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        // 0 - original function statement 
+
+        function getDouble0(value) {
+            return value * 2
+        }
+
+
+
+
+        // 1 - remove 'function' and add arrow!
+
+        const getDouble1 = (value) => {
+            return value * 2
+        }
+
+
+
+
+        // 2 - remove () for single-parameter functions
+
+        const getDouble2 = value => {
+            return value * 2
+        }
+
+
+
+        // 3 - remove {} single statement functions (has auto return implemented!)
+
+        const getDouble3 = value => value * 2
+
+
+
+
+
+
+
+
+
+        // Example: 
+        const generateBookingDetails = (date, price) => `Su reserva para el día ${date} (${price}€) está CONFIRMADA`
+
+        // Equivalent to:
+        // function generateBookingDetails(date, price){
+        //     return  `Su reserva para el día ${date} (${price}€) está CONFIRMADA`
+        // }
+
+        console.log(generateBookingDetails('11/11/11', 876474))
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const dogName = 'Popino'
+        console.log('El tipo de dato textual es', typeof dogName)
+
+
+
+        // Backticks (interpolation)
+        const fullSentence = `Mi perro se llama ${dogName} y es la leche, ya tiene ${14 + 3} años!`
+        console.log(fullSentence)
+
+
+
+        // String length property 
+        console.log('La longitud del texto es de', fullSentence.length, 'caracteres')
+
+
+        // String charAt() method
+        console.log('El caracter en la posición 1 es', fullSentence.charAt(0))
+        console.log('El caracter en la posición 10 es', fullSentence.charAt(9))
+        console.log('El caracter en la posición 98 es', fullSentence.charAt(97))
+
+        // String indexOf() method
+        console.log('La palabra "Mi" se encuentra en el índice', fullSentence.indexOf('Mi'))
+        console.log('La palabra "perro" se encuentra en el índice', fullSentence.indexOf('perro'))
+        console.log('La palabra "batman" se encuentra en el índice', fullSentence.indexOf('batman'))
+
+        // String substring()/ substr() methods
+        const subtext1 = fullSentence.substring(2, 10)          // Desde el 2 hasta el 10
+        console.log(subtext1)
+
+        const subtext2 = fullSentence.substr(2, 10)             // Desde el 2 coge 10
+        console.log(subtext2)
+
+        // String startsWith() method
+        console.log('Empieza el texto con "Mi"?', fullSentence.startsWith('Mi'))
+
+        // String endsWith() method
+        console.log('Termina el texto con "batman"?', fullSentence.endsWith('batman'))
+
+        // String includes() method
+        console.log('Incluye el texto con "leche"?', fullSentence.includes('leche'))
+
+
+    </script>
+</body>
+
+</html>

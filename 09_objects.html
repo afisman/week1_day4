@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const person = {
+            name: 'German',
+            lastName: 'Álvarez',
+            birth: new Date(1986, 4, 23),
+            celiac: false,
+            job: {
+                title: 'Teacher',
+                salary: 1000
+            },
+            hobbies: ['sky', 'rave', 'gadgets'],
+            subscriptions: [
+                {
+                    name: 'Netflix',
+                    price: 9.99
+                },
+                {
+                    name: 'Amazon Prime',
+                    price: 9.99
+                }
+            ]
+        }
+
+
+        // Access (getter)
+        console.log(`Me llamo ${person.name} ${person['lastName']} y trabajo de ${person.job.title}`)
+
+        console.log('Mis hobbies son:')
+        for (let i = 0; i < person.hobbies.length; i++) {
+            console.log(`Me gusta: ${person.hobbies[i]}`)
+        }
+
+        // Access (setter)
+        person.job.salary = 1010
+        console.log('Ahora gano', person.job.salary, '€... D:')
+
+
+        // Object extension
+        person.weight = 80
+        console.log('Ahora peso', person.weight, 'kilos')
+
+        // Object keys
+        console.log('Las claves del objeto son:', Object.keys(person))
+
+        // Object values
+        console.log('Los valores del objeto son:', Object.values(person))
+
+
+
+
+        // forEach party yay!
+        person.subscriptions.forEach(function (eachSubscription) {
+            console.log(`- ${eachSubscription.name} me cuesta ${eachSubscription.price}`)
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
